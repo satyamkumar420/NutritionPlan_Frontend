@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar Overall */
+::-webkit-scrollbar {
+  width: 2px; /* Scrollbar ki width */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  background: #ebe9e9;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Scrollbar Thumb on Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ebe9e9;
+}
+
+/* Scrollbar Track */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cecccc #f1f1f1; /* Thumb color and track color */
+}
