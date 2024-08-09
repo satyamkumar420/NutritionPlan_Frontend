@@ -30,8 +30,8 @@ This is a React-based web application that allows users to generate personalized
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/nutrition-plan-generator.git
-   cd nutrition-plan-generator
+   git clone https://github.com/satyamkumar420/NutritionPlan_Frontend.git
+   cd NutritionPlan_Frontend
    ```
 
 2. **Install dependencies:**
@@ -91,7 +91,3 @@ Contributions are welcome! Please fork this repository, make your changes, and s
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-```
-
-```
