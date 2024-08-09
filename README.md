@@ -62,18 +62,32 @@ This is a React-based web application that allows users to generate personalized
 ## Project Structure
 
 ```plaintext
-├── public
-│   └── index.html         # HTML template
-├── src
-│   ├── components
-│   │   ├── Navbar.js      # Navbar component
-│   │   ├── NutritionPlan.js # Main Nutrition Plan component
-│   │   ├── Home.js        # Home component
-│   │   └── PlanDetail.js  # Detailed Plan component
-│   ├── App.js             # Main app component
-│   ├── index.js           # Entry point
-│   └── styles.css         # CSS styles
-└── package.json           # Project metadata and dependencies
+frontend/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Loading.jsx
+│   │   └── Navbar.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── NutritionPlan.jsx
+│   │   └── PlanDetail.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── postcss.config.js
+├── README.md
+└── tailwind.config.js
+
 ```
 
 ## Dependencies
