@@ -34,7 +34,7 @@ const NutritionPlan = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/generate-nutrition-plan",
+        "https://nutritionplan-backend.onrender.com/generate-nutrition-plan",
         formData
       );
       const generatedPlan = res.data.text;
