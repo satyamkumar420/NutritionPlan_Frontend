@@ -7,6 +7,12 @@ const PlanDetail = () => {
   const plans = JSON.parse(localStorage.getItem("nutritionPlans")) || [];
   const plan = plans[index];
 
+  const handleDelete = () => {
+    const updatedPlans = plans.filter((_, i) => i !== parseInt(index));
+    localStorage.setItem("nutritionPlans", JSON.stringify(updatedPlans));
+    navigate("/");
+  };
+
   if (!plan) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 text-gray-900">
@@ -34,12 +40,18 @@ const PlanDetail = () => {
           className="prose max-w-full"
           dangerouslySetInnerHTML={{ __html: marked(plan.plan) }}
         />
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-4 mt-6">
           <button
             onClick={() => navigate("/")}
-            className="mt-6 w-full sm:w-60 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            className=" w-full sm:w-60 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
           >
             Back to Home
+          </button>
+          <button
+            onClick={handleDelete}
+            className="w-full sm:w-60  px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+          >
+            Delete Plan
           </button>
         </div>
       </div>

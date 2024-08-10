@@ -2,6 +2,9 @@ import { useState } from "react";
 import axios from "axios";
 import { marked } from "marked";
 
+const API_URL =
+  "https://nutritionplan-backend.onrender.com/generate-nutrition-plan";
+
 const NutritionPlan = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -33,10 +36,7 @@ const NutritionPlan = () => {
     setNutritionPlan("");
 
     try {
-      const res = await axios.post(
-        "https://nutritionplan-backend.onrender.com/generate-nutrition-plan",
-        formData
-      );
+      const res = await axios.post(API_URL, formData);
       const generatedPlan = res.data.text;
       setNutritionPlan(generatedPlan);
 
